@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+  </head>
+  <body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">
+      <span class="logo-icon">🎓</span>
+      <h2>Maturitný zošit</h2>
+    </div>
+
+    <div class="menu">
+      <p class="menu-title">MENU</p>
+
+      <button class="menu-item active" id="homeBtn">
+        🏠 Domov
+      </button>
+
+      <button class="menu-item" id="subjectsBtn">
+        📚 Predmety
+      </button>
+    </div>
+
+    <div class="sidebar-bottom">
+      <p>Príprava na maturitu</p>
+      <span>Verzia 1.0</span>
+    </div>
+  </aside>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <header class="topbar">
+      <div>
+        <h1>Moje maturitné témy</h1>
+        <p>Všetky tvoje poznámky na jednom mieste.</p>
+      </div>
+
+      <button class="add-btn" id="addTopicBtn">
+        + Nová téma
+      </button>
+    </header>
+
+
+    <!-- STATISTICS -->
+    <section class="stats">
+
+      <div class="stat-card">
+        <span>📚</span>
+        <h2 id="totalTopics">0</h2>
+        <p>Všetky témy</p>
+      </div>
+
+      <div class="stat-card">
+        <span>📖</span>
+        <h2 id="totalSubjects">0</h2>
+        <p>Predmety</p>
+      </div>
+
+    </section>
+
+
+    <!-- SEARCH -->
+    <section class="search-section">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Vyhľadať maturitnú tému..."
+      />
+    </section>
+
+
+    <!-- TOPICS -->
+    <section class="topics-section">
+
+      <div class="section-header">
+        <h2 id="sectionTitle">Moje témy</h2>
+      </div>
+
+      <div class="topics-grid" id="topicsContainer">
+
+        <!-- Témy sa zobrazia pomocou JavaScriptu -->
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+
+<!-- MODAL: ADD / EDIT TOPIC -->
+<div class="modal" id="topicModal">
+
+  <div class="modal-content">
+
+    <h2 id="modalTitle">Nová maturitná téma</h2>
+
+    <label>Názov témy</label>
+    <input
+      type="text"
+      id="topicName"
+      placeholder="Napr. Počítačové siete"
+    />
+
+    <label>Predmet</label>
+    <input
+      type="text"
+      id="topicSubject"
+      placeholder="Napr. Informatika"
+    />
+
+    <label>Obsah témy</label>
+    <textarea
+      id="topicContent"
+      placeholder="Sem napíš svoje maturitné poznámky..."
+    ></textarea>
+
+    <div class="modal-buttons">
+      <button class="cancel-btn" id="cancelBtn">
+        Zrušiť
+      </button>
+
+      <button class="save-btn" id="saveTopicBtn">
+        Uložiť tému
+      </button>
+    </div>
+
+  </div>
+
+</div>
+    <script src="./script.js"></script>
+  </body>
+</html>
